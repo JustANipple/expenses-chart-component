@@ -29,8 +29,15 @@ function createBars(amounts) {
         barDayCont.appendChild(day);
         fillDays(amounts);
     }
-    //this is the max value of the bars height in rem
-    const maxHeight = 9.5;
+    //max value of the bars height in rem (9.5 in mobile, 8.5 in desktop)
+    const windowWidth = window.innerWidth;
+    let maxHeight = 0;
+    if(windowWidth < 768) {
+        maxHeight = 9.5;
+    } else {
+        maxHeight = 8.5;
+    }
+    
     //check the highest number in the data for the proportion
     const highest = highNumber(amounts);
 

@@ -2,10 +2,9 @@
 
 .summary {
     background-color: v.$very-pale-orange;
-    padding-block: 1.5rem;
-    padding-inline: 1rem;
+    padding-block: 1.25rem;
+    padding-inline: 1.25rem;
     border-radius: .75rem;
-    
 
     .summary_chart {
 
@@ -19,11 +18,12 @@
             justify-content: space-between;
             align-items: flex-end;
             padding-block-start: 3rem;
+            margin-block-end: .5rem;
 
             .bar_day_container {
                 position: relative;
                 display: flex;
-                gap: .5rem;
+                gap: .75rem;
                 flex-direction: column;
                 align-items: center;
 
