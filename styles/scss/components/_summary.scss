@@ -1,0 +1,63 @@
+@use "../variables" as v;
+
+.summary {
+    background-color: v.$very-pale-orange;
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    border-radius: .75rem;
+    
+
+    .summary_chart {
+
+        .chart_title {
+            color: v.$dark-brown;
+        }
+
+        .chart_bars {
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            border: 1px solid v.$cream;
+        }
+    }
+
+    .summary_recap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block-start: 1rem;
+
+        .recap_total {
+            display: flex;
+            flex-direction: column;
+
+            .total_text {
+                color: v.$medium-brown;
+            }
+
+            .total_amount {
+                font-size: calc(v.$fs * 1.675);
+                font-weight: v.$fw-bold;
+                color: v.$dark-brown;
+            }
+        }
+
+        .recap_last_month {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            .last_month_difference {
+                color: v.$dark-brown;
+                font-weight: v.$fw-bold;
+            }
+
+            .last_month_text {
+                color: v.$medium-brown;
+            }
+        }
+    }
+}

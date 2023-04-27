@@ -1,8 +1,10 @@
 //CSS reset from Josh Comeau
 @use "scss/reset";
-//base
+//Base
 @use "scss/base";
 //Variables
 @use "scss/variables";
 //Balance bar
 @use "scss/components/balance";
+//Summary section
+@use "scss/components/summary";

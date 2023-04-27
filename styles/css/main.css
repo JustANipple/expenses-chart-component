@@ -77,4 +77,50 @@ body {
 }
 .balance .balance_logo {
   max-width: 4rem;
+}
+
+.summary {
+  background-color: hsl(33, 100%, 98%);
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.75rem;
+}
+.summary .summary_chart .chart_title {
+  color: hsl(25, 47%, 15%);
+}
+.summary .summary_chart::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border: 1px solid hsl(27, 66%, 92%);
+}
+.summary .summary_recap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 1rem;
+}
+.summary .summary_recap .recap_total {
+  display: flex;
+  flex-direction: column;
+}
+.summary .summary_recap .recap_total .total_text {
+  color: hsl(28, 10%, 53%);
+}
+.summary .summary_recap .recap_total .total_amount {
+  font-size: 1.884375rem;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+.summary .summary_recap .recap_last_month {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.summary .summary_recap .recap_last_month .last_month_difference {
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+.summary .summary_recap .recap_last_month .last_month_text {
+  color: hsl(28, 10%, 53%);
 }/*# sourceMappingURL=main.css.map */
