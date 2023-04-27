@@ -90,27 +90,42 @@ body {
 }
 .summary .summary_chart .chart_bars {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding-block-start: 3rem;
   gap: 0.75rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-block-start: 3rem;
 }
-.summary .summary_chart .chart_bars .barAndDay {
+.summary .summary_chart .chart_bars .bar_day_container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.summary .summary_chart .chart_bars .bar_day_container .container_bar {
   background-color: hsl(10, 79%, 65%);
-  border-radius: 0.25rem;
   width: 2rem;
-  height: 1rem;
+  border-radius: 0.25rem;
 }
-.summary .summary_chart .chart_bars .barAndDay:hover::before {
+.summary .summary_chart .chart_bars .bar_day_container .container_bar:hover {
+  filter: brightness(1.2);
+}
+.summary .summary_chart .chart_bars .bar_day_container .container_bar:hover::before {
   content: "";
-  display: inline-block;
-  width: 3.5rem;
-  height: 2rem;
-  background-color: black;
+  display: inline-flex;
   position: relative;
-  top: -2.5rem;
   border-radius: inherit;
-  transform: translateX(-0.75rem);
+  left: -0.5rem;
+  top: -2rem;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: black;
+}
+.summary .summary_chart .chart_bars .bar_day_container .container_day {
+  font-size: 0.75rem;
+  color: hsl(28, 10%, 53%);
+}
+.summary .summary_chart .chart_bars .bar_day_container #current_day {
+  background-color: hsl(186, 34%, 60%);
 }
 .summary .summary_chart::after {
   content: "";

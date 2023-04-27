@@ -15,27 +15,46 @@
 
         .chart_bars {
             display: flex;
-            justify-content: space-between;
-            align-items: end;
-            padding-block-start: 3rem;
             gap: .75rem;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-block-start: 3rem;
 
-            .barAndDay {
-                background-color: v.$soft-red;
-                border-radius: .25rem;
-                width: 2rem;
-                height: 1rem;
+            .bar_day_container {
+                display: flex;
+                gap: .5rem;
+                flex-direction: column;
+                align-items: center;
 
-                &:hover::before {
-                    content: "";
-                    display: inline-block;
-                    width: 3.5rem;
-                    height: 2rem;
-                    background-color: black;
-                    position: relative;
-                    top: -2.5rem;
-                    border-radius: inherit;
-                    transform: translateX(-.75rem);
+                .container_bar {
+                    background-color: v.$soft-red;
+                    width: 2rem;
+                    border-radius: .25rem;
+
+                    &:hover {
+                        filter: brightness(1.2);
+                    }
+
+                    &:hover::before {
+                        content: "";
+                        display: inline-flex;
+                        position: relative;
+                        border-radius: inherit;
+                        left: -.5rem;
+                        top: -2rem;
+                        width: 3rem;
+                        height: 1.5rem;
+                        background-color: black;
+                    }
+                }
+
+                .container_day {
+                    font-size: calc(v.$fs / 1.5);
+                    color: v.$medium-brown;
+                }
+
+                #current_day {
+                    background-color: v.$cyan;
                 }
             }
         }
