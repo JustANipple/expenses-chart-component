@@ -8,6 +8,13 @@ body {
     align-items: center;
 }
 
+.container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .sr-only {
     width: 0;
     height: 0;

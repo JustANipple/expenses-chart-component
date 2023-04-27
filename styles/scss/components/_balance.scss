@@ -1,0 +1,26 @@
+@use "../variables" as v;
+
+.balance {
+    background-color: v.$soft-red;
+    color: v.$very-pale-orange;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .75rem;
+
+    .balance_content {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+
+        .content_amount {
+            font-weight: v.$fw-bold;
+            font-size: calc(v.$fs * 1.25);
+        }
+    }
+
+    .balance_logo {
+        max-width: 4rem;
+    }
+}
