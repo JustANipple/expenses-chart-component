@@ -88,6 +88,30 @@ body {
 .summary .summary_chart .chart_title {
   color: hsl(25, 47%, 15%);
 }
+.summary .summary_chart .chart_bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-block-start: 3rem;
+  gap: 0.75rem;
+}
+.summary .summary_chart .chart_bars .barAndDay {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 1rem;
+}
+.summary .summary_chart .chart_bars .barAndDay:hover::before {
+  content: "";
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+  background-color: black;
+  position: relative;
+  top: -2.5rem;
+  border-radius: inherit;
+  transform: translateX(-0.75rem);
+}
 .summary .summary_chart::after {
   content: "";
   display: inline-block;

@@ -14,6 +14,30 @@
         }
 
         .chart_bars {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            padding-block-start: 3rem;
+            gap: .75rem;
+
+            .barAndDay {
+                background-color: v.$soft-red;
+                border-radius: .25rem;
+                width: 2rem;
+                height: 1rem;
+
+                &:hover::before {
+                    content: "";
+                    display: inline-block;
+                    width: 3.5rem;
+                    height: 2rem;
+                    background-color: black;
+                    position: relative;
+                    top: -2.5rem;
+                    border-radius: inherit;
+                    transform: translateX(-.75rem);
+                }
+            }
         }
 
         &::after {
@@ -61,3 +85,4 @@
         }
     }
 }
+
