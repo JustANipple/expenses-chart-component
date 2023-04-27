@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Title -->
+  <title>Frontend Mentor | Expenses chart component</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <h1 class="sr-only">Expenses chart component</h1>
+
+    <div class="balance">
+      <div class="balance_content">
+        <p class="content_text">My balance</p>
+        <p class="content_amount">$921.48</p>
+      </div>
+      <div class="balance_logo">
+        <img 
+        src="images/logo.svg" 
+        alt="logo"
+        class="logo">
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="summary_chart">
+        <h2 class="chart_title">Spending - Last 7 days</h2>
+        <div class="chart_bars">
+
+        </div>
+      </div>
+      <!--Place the line here-->
+      <div class="summary_recap">
+        <div class="recap_total">
+          <p class="total_text">Total this month</p>
+          <p class="total_amount">$478.33</p>
+        </div>
+        <div class="recap_last_month">
+          <p class="last_month_difference">+2.4%</p>
+          <p class="last_month_text">from last month</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script/script.js"></script>
+  
+</body>
+</html>
