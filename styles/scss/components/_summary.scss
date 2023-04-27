@@ -21,31 +21,36 @@
             padding-block-start: 3rem;
 
             .bar_day_container {
+                position: relative;
                 display: flex;
                 gap: .5rem;
                 flex-direction: column;
                 align-items: center;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .container_spending {
+                    background-color: v.$dark-brown;
+                    color: v.$very-pale-orange;
+                    font-size: calc(v.$fs / 1.5);
+                    font-weight: v.$fw-bold;
+                    border-radius: .25rem;
+                    position: absolute;
+                    top: -2rem;
+                    display: flex;
+                    justify-content: center;
+                    padding: .25rem;
+                    transition: all .5s ease-in-out;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
                 .container_bar {
                     background-color: v.$soft-red;
                     width: 2rem;
                     border-radius: .25rem;
-
-                    &:hover {
-                        filter: brightness(1.2);
-                    }
-
-                    &:hover::before {
-                        content: "";
-                        display: inline-flex;
-                        position: relative;
-                        border-radius: inherit;
-                        left: -.5rem;
-                        top: -2rem;
-                        width: 3rem;
-                        height: 1.5rem;
-                        background-color: black;
-                    }
                 }
 
                 .container_day {

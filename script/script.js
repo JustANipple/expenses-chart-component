@@ -15,6 +15,10 @@ function createBars(amounts) {
         const barDayCont = document.createElement("div");
         barDayCont.setAttribute("class", "bar_day_container");
         chart.appendChild(barDayCont);
+        //hover element
+        const spending = document.createElement("div");
+        spending.setAttribute("class", "container_spending");
+        barDayCont.appendChild(spending);
         //bar
         const bar = document.createElement("div");
         bar.setAttribute("class", "container_bar");
@@ -37,6 +41,26 @@ function createBars(amounts) {
     }
     
     barsArr[new Date().getDay() - 1].setAttribute("id", "current_day");
+    
+    fillSpending(amounts);
+}
+
+function fillSpending(amounts) {
+    const spendings = document.querySelectorAll(".container_spending");
+    for(let i = 0; i < spendings.length; i++) {
+        spendings[i].textContent = "$" + amounts[i].amount;
+        //events for hovering
+        spendings[i].parentElement.addEventListener("mouseover", (event) => {
+            spendings[i].style.visibility = "visible";
+            spendings[i].style.opacity = "1";
+            spendings[i].parentElement.style.filter = "brightness(1.2)";
+        });
+        spendings[i].parentElement.addEventListener("mouseout", (event) => {
+            spendings[i].style.visibility = "hidden";
+            spendings[i].style.opacity = "0";
+            spendings[i].parentElement.style.filter = "brightness(1)";
+        });
+    }
 }
 
 function fillDays(amounts) {

@@ -96,29 +96,34 @@ body {
   padding-block-start: 3rem;
 }
 .summary .summary_chart .chart_bars .bar_day_container {
+  position: relative;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
   align-items: center;
 }
+.summary .summary_chart .chart_bars .bar_day_container:hover {
+  cursor: pointer;
+}
+.summary .summary_chart .chart_bars .bar_day_container .container_spending {
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: -2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
 .summary .summary_chart .chart_bars .bar_day_container .container_bar {
   background-color: hsl(10, 79%, 65%);
   width: 2rem;
   border-radius: 0.25rem;
-}
-.summary .summary_chart .chart_bars .bar_day_container .container_bar:hover {
-  filter: brightness(1.2);
-}
-.summary .summary_chart .chart_bars .bar_day_container .container_bar:hover::before {
-  content: "";
-  display: inline-flex;
-  position: relative;
-  border-radius: inherit;
-  left: -0.5rem;
-  top: -2rem;
-  width: 3rem;
-  height: 1.5rem;
-  background-color: black;
 }
 .summary .summary_chart .chart_bars .bar_day_container .container_day {
   font-size: 0.75rem;
