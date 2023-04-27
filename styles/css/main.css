@@ -31,4 +31,21 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+/* Color */
+/* Font */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sr-only {
+  width: 0;
+  height: 0;
+  position: absolute;
+  color: transparent;
 }/*# sourceMappingURL=main.css.map */
