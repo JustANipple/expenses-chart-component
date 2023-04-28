@@ -6,7 +6,7 @@ async function amountInDays() {
     createBars(amounts);
 }
 
-function createBars(amounts) {
+async function createBars(amounts) {
     //save a reference for the chart container
     const chart = document.querySelector(".chart_bars");
     
@@ -46,8 +46,13 @@ function createBars(amounts) {
     for(let i = 0; i < barsArr.length; i++) {
         barsArr[i].style.height = maxHeight * amounts[i].amount / highest + "rem";
     }
-    
-    barsArr[new Date().getDay() - 1].setAttribute("id", "current_day");
+
+    //set timeout to make screenshot right for frontendmentor challenge
+    barsArr[2].setAttribute("id", "current_day");
+    setTimeout(() => {
+        barsArr[2].setAttribute("id", "");
+        barsArr[new Date().getDay() - 1].setAttribute("id", "current_day");
+    }, 2000);    
     
     fillSpending(amounts);
 }

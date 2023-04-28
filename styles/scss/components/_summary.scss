@@ -60,6 +60,7 @@
 
                 #current_day {
                     background-color: v.$cyan;
+                    transition: all .5s ease-in-out;
                 }
             }
         }

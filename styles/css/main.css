@@ -154,6 +154,7 @@ body {
 }
 .summary .summary_chart .chart_bars .bar_day_container #current_day {
   background-color: hsl(186, 34%, 60%);
+  transition: all 0.5s ease-in-out;
 }
 .summary .summary_chart::after {
   content: "";
