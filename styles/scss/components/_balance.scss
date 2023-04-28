@@ -23,3 +23,26 @@
         max-width: 4rem;
     }
 }
+
+@media screen and (min-width: v.$min-width) {
+    .balance {
+        padding-block: 1.5rem;
+        padding-inline: 2rem;
+        border-radius: 1rem;
+        
+        .balance_content {
+
+            .content_text {
+                font-size: v.$fs;
+            }
+
+            .content_amount {
+                font-size: calc(v.$fs * 1.75);
+            }
+        }
+        
+        .balance_logo {
+            max-width: unset;
+        }
+    }
+}

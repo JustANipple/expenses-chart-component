@@ -43,8 +43,8 @@
                     justify-content: center;
                     padding: .25rem;
                     transition: all .5s ease-in-out;
-                    visibility: hidden;
-                    opacity: 0;
+                    //visibility: hidden;
+                    //opacity: 0;
                 }
 
                 .container_bar {
@@ -110,3 +110,38 @@
     }
 }
 
+@media screen and (min-width: v.$min-width) {
+
+    .summary {
+        padding-block: 2rem;
+        padding-inline: 2.5rem;
+        border-radius: 1rem;
+
+        .summary_chart {
+            
+            .chart_title {
+                font-size: calc(v.$fs * 1.813);
+            }
+
+            .chart_bars {
+                gap: 1.125rem;
+                margin-block-end: .75rem;
+
+                .bar_day_container {
+                    gap: .5rem;
+
+                    .container_spending {
+                        font-size: v.$fs;
+                        top: -2.75rem;
+                        padding-block: .325rem;
+                        padding-inline: .5rem;
+                    }
+
+                    .container_bar {
+                        width: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
