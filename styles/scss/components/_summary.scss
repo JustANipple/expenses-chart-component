@@ -43,8 +43,8 @@
                     justify-content: center;
                     padding: .25rem;
                     transition: all .5s ease-in-out;
-                    //visibility: hidden;
-                    //opacity: 0;
+                    visibility: hidden;
+                    opacity: 0;
                 }
 
                 .container_bar {
@@ -75,7 +75,7 @@
     .summary_recap {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         padding-block-start: 1rem;
 
         .recap_total {
@@ -125,6 +125,7 @@
 
             .chart_bars {
                 gap: 1.125rem;
+                padding-block-start: 3.75rem;
                 margin-block-end: .75rem;
 
                 .bar_day_container {
@@ -138,9 +139,31 @@
                     }
 
                     .container_bar {
-                        width: 3rem;
+                        width: 3.125rem;
+                    }
+
+                    .container_day {
+                        font-size: calc(v.$fs / 1.125);
                     }
                 }
+            }
+        }
+
+        .summary_recap {
+
+            .recap_total {
+
+                .total_text {
+                    font-size: v.$fs;
+                }
+
+                .total_amount {
+                    font-size: calc(v.$fs * 2.5);
+                }
+            }
+
+            .recap_last_month {
+                font-size: v.$fs;
             }
         }
     }

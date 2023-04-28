@@ -13,6 +13,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media screen and (min-width: v.$min-width) {
+        padding-block: 11rem;
+        gap: 1.5rem;
+    }
 }
 
 .sr-only {

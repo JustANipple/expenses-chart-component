@@ -35,7 +35,7 @@ function createBars(amounts) {
     if(windowWidth < 768) {
         maxHeight = 9.5;
     } else {
-        maxHeight = 8.5;
+        maxHeight = 9.5;
     }
     
     //check the highest number in the data for the proportion
